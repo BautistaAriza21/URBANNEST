@@ -1,7 +1,19 @@
 {
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/(.*\\.(css|js|webp))",
+      "dest": "/src/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      },
+      "continue": true
+    },
+    {
+      "src": "/nuestros-agentes",
+      "dest": "/src/nuestros-agentes/index.html"
+    },
+    {
+      "src": "/(.*)", 
       "dest": "/src/index.html"
     }
   ]
