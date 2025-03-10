@@ -1,17 +1,18 @@
 {
     "routes": [
       {
+        "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico|json))",
+        "headers": {
+          "Cache-Control": "public, max-age=31536000, immutable"
+        },
+        "continue": true
+      },
+      {
         "src": "/(.*)",
         "dest": "/index.html",
         "headers": {
           "Cache-Control": "no-cache"
         }
-      },
-      {
-        "src": "/(.*\\.(png|jpg|jpeg|gif|svg|css|js))",
-        "headers": {
-          "Cache-Control": "public, max-age=31536000, immutable"
-        }
       }
     ]
-  }
+}
