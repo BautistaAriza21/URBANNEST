@@ -3,6 +3,7 @@
     "@tailwindcss/cli": "^4.0.6"
   },
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "vercel": "npm run vercel-build"
   }
 }
