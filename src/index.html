@@ -268,7 +268,7 @@
             const chatContent = document.getElementById('chat-content');
             const closeButton = document.getElementById('close-chat');
     
-            // Event Listeners (se mantienen igual)
+            // Event Listeners 
             chatOpener.addEventListener('click', () => toggleChat(true));
             closeButton.addEventListener('click', () => toggleChat(false));
     
@@ -304,7 +304,6 @@
                 }
             });
     
-            // Funciones para búsqueda de propiedades (modificadas para 5 provincias)
             function mostrarProvincias() {
                 const provinciasUnicas = [...new Set(propiedades.map(p => p.provincia))].slice(0, 5);
                 
@@ -323,7 +322,6 @@
                 chatContent.innerHTML += contenido;
             }
     
-            // Resto de funciones para propiedades (se mantienen igual)
             function seleccionarProvincia(provincia) {
                 estadoChat.busqueda.provincia = provincia;
                 agregarMensaje(`Provincia seleccionada: ${provincia}`, true);
